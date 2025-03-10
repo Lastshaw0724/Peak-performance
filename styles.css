@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; 
+    margin: 0;
+  }
+
+ .container {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px; 
+    height: 790px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .formulario {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    margin-bottom: 20px;
+  }
+   .caja1{
+    background-color: #303030;
+    display: flex;
+    height: 100px;
+    width: 100%;
+   }
+
+   .caja2{
+    height: 650px;
+    width: 100%;
+    background-color: rgb(66, 65, 65);
+    text-align: center;
+   }
+  
+  .input label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input input,
+  .input select {
+    width: calc(100% - 12px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+  }
+  
+  .botton {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .botton button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .botton .login {
+    background-color: #8a828a;
+    color: white;
+    text-decoration: none;
+  }
