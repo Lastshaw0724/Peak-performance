@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* altura total de la pantalla */
+}
+
+.buscador{
+  position: relative;
+}
+
+.buscar{
+  width: 220px;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 10px 0px 0px 10px;
+  border: 0px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.boton{
+  background-color: red;
+  padding: 10px 15px ;
+  position: absolute;
+  border: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #585454;
+}
+
+.cartilla-container {
+  width: 375px;
+  height: 780px; /* altura aumentada */
+  background-color: #2f2f2f;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+    justify-content: space-between;
+}
+.productosfila {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-columns: repeat(2, 1.5fr);
+  gap: 2px;
+
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+.mesero {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Título y botón de salida */
+.titulo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.titulo {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.icono-salida {
+  font-size: 20px;
+}
+
+/* Categoría principal */
+.categoria-principal {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0px 0;
+}
+
+/* Productos fila */
+.fila {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.producto {
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.foto {
+  height: 90px;
+
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.nombre {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Sección añadir */
+.seccion-anadir {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.titulo-anadir {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.lista-categorias {
+  list-style: none;
+}
+
+.lista-categorias li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px ;
+  font-weight: bold;
+}
+
+.bullet {
+  margin-right: 5px;
+}
+
+.flecha {
+  font-size: 14px;
+}
+
+/* Botones de acción */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.confirmar {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.cancelar {
+  background-color: #636e72;
+  color: white;
+}
+

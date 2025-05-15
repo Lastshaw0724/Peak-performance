@@ -1,0 +1,182 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px; /* Ajusta el ancho según necesites */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-icono {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nombre-admin {
+    font-size: 16px;
+}
+
+.selector-historial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.flecha-izquierda, .flecha-derecha {
+    background-color: #444;
+    color: #eee;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.switch-historial {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    color: #eee;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.titulo-historial {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tabla-historial {
+    display: grid;
+    grid-template-columns: 1fr ; /* Ajuste para dar más espacio al mesero */
+    padding: 0 15px;
+    overflow-y: auto;
+    max-height: 650px; /* ¡Altura máxima aumentada para hacerlo más largo! */
+}
+
+.fila-cabecera {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.columna-cabecera {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+
+.fila-historial {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    padding: 8px;
+    border-bottom: 1px solid #444;
+    align-items: center;
+}
+
+.celda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.celda.mesero {
+    flex-direction: row; /* Organiza el contenido del mesero en fila */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos del mesero */
+}
+
+.info-mesero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto del mesero a la izquierda */
+}
+
+.imagen-pedido {
+    background-color: #555;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.icono-mesero {
+    background-color: #777;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.nombre-mesero {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.id-mesero {
+    font-size: 12px;
+    color: #ddd;
+}
+
+.fecha {
+    font-size: 14px;
+}
+
+.scroll-indicator {
+    background-color: #444;
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.barra-scroll {
+    background-color: #666;
+    width: 6px;
+    border-radius: 3px;
+    height: 120px; /* Ajusta la altura visual según necesites */
+}

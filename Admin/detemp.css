@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  width: 375px;
+  height: 730px;
+  background-color: #2f2f2f;
+  color: white;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+.admin-info {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Título e icono de salida */
+.titulo-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 10px;
+}
+
+.icono-salida {
+  font-size: 20px;
+}
+
+/* Subcategoría */
+.subcategoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.subcategoria img {
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.flecha-izq {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Lista de empleados */
+.lista-empleados {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 5px;
+}
+
+/* Tarjeta de empleado */
+.card-empleado {
+  display: flex;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.foto {
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+}
+
+.datos p {
+  font-size: 14px;
+  margin-bottom: 4px;
+}

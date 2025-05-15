@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px; /* Ajusta el ancho según necesites */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-icono {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nombre-admin {
+    font-size: 16px;
+}
+
+.selector-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.flecha-izquierda, .flecha-derecha {
+    background-color: #444;
+    color: #eee;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.switch-productos {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    color: #eee;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.barra-busqueda {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.barra-busqueda input[type="text"] {
+    background-color: #444;
+    color: #eee;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+.boton-buscar {
+    background-color: #555;
+    color: #eee;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.lista-productos {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    max-height: 500px; /* Ajusta la altura máxima para hacerlo largo */
+}
+
+.producto-item {
+    background-color: #444;
+    border-radius: 5px;
+    height: 20px; /* Simula una línea de producto */
+}
+
+.filtros {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.boton-filtro {
+    background-color: #555;
+    color: #eee;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.scroll-indicator {
+    background-color: #444;
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.barra-scroll {
+    background-color: #666;
+    width: 6px;
+    border-radius: 3px;
+    height: 100px; /* Ajusta la altura visual según necesites */
+}

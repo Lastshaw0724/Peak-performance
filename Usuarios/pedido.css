@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background-color: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px; /* Ajusta el ancho según necesites */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    /* Opcional: para que el contenedor mismo sea más alto */
+    /* min-height: 700px; */
+}
+
+.cabecera {
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.menu-icono {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nombre-mesero {
+    font-size: 16px;
+}
+
+.selector-pedidos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.flecha-izquierda, .flecha-derecha {
+    background-color: #444;
+    color: #eee;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.switch-pedidos {
+    background-color: #222;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    color: #eee;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lista-pedidos {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    max-height: 700px; /* ¡Altura máxima aumentada! */
+}
+
+.pedido-item {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pedido-item.listo {
+    background-color: #388e3c; /* Verde para pedido listo */
+}
+
+.indicador-pedido {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.info-pedido {
+    flex-grow: 1;
+}
+
+.pedido-numero {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mesa-numero {
+    font-size: 14px;
+}
+
+.estado-pedido {
+    font-weight: bold;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.estado-pedido.falta {
+    color: #e74c3c; /* Rojo para falta */
+}
+
+.tiempo {
+    font-weight: normal;
+    color: #ddd;
+}
+
+.scroll-indicator {
+    background-color: #444;
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.barra-scroll {
+    background-color: #666;
+    width: 6px;
+    border-radius: 3px;
+    height: 120px; /* Ajusta la altura visual según necesites */
+}

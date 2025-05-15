@@ -1,0 +1,86 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Un fondo claro */
+    color: #333; /* Texto oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background-color: #222; /* Fondo oscuro como en la imagen */
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px; /* Ancho aproximado del dispositivo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido */
+    height: 750px;
+}
+
+.cabecera {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.menu-icono {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.nombre-admin {
+    font-size: 18px;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.foto-perfil {
+    background-color: #eee; /* Fondo claro para la foto */
+    color: #555; /* Texto gris para "foto/img" */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.boton-menu {
+    background-color: #eee; /* Botones claros */
+    color: #333; /* Texto oscuro en los botones */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.boton-menu:hover {
+    background-color: #ddd; /* Un tono ligeramente más oscuro al pasar el ratón */
+}

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.buscador{
+  position: relative;
+}
+
+.buscar{
+  width: 220px;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 10px 0px 0px 10px;
+  border: 0px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.boton{
+  background-color: red;
+  padding: 10px 15px ;
+  position: absolute;
+  border: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.boton:hover{
+  background-color: #585454;
+}
+
+.cartilla-container {
+  width: 375px;
+  background-color: #000;
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+.mesero {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Título */
+.titulo {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/* Categoría */
+.categoria {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.producto {
+  background-color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.foto {
+  height: 90px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nombre {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  background: #444;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Botones de acción */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.añadir {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.cancelar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.confirmar {
+  background-color: #9b59b6;
+  color: white;
+}
+
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="pedido.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+            <div class="menu-icono">☰</div>
+            <div class="nombre-mesero">nombre: Usuario</div>
+        </header>
+
+        <div class="selector-pedidos">
+            <div class="flecha-izquierda"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m15.41 16.59-4.58-4.59 4.58-4.59L14 6l-6 6 6 6l1.41-1.41z"/></svg></div>
+            <div class="switch-pedidos">
+                <input type="checkbox" id="ver-pedidos" class="switch-input">
+                <label for="ver-pedidos" class="switch-label">PEDIDOS</label>
+            </div>
+            <div class="flecha-derecha"><svg xmlns="http://www.w3.org/24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m8.59 16.59 4.58-4.59-4.58-4.59L10 6l6 6-6 6l-1.41-1.41z"/></svg></div>
+        </div>
+
+        <div class="lista-pedidos">
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #1</div>
+                    <div class="mesa-numero">MESA #5</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">25 Min</span></div>
+            </div>
+
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #2</div>
+                    <div class="mesa-numero">MESA #8</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">45 Min</span></div>
+            </div>
+
+            <div class="pedido-item listo">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #3</div>
+                    <div class="mesa-numero">MESA #10</div>
+                </div>
+                <div class="estado-pedido">LISTO</div>
+            </div>
+
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #4</div>
+                    <div class="mesa-numero">MESA #12</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">10 Min</span></div>
+            </div>
+
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #5</div>
+                    <div class="mesa-numero">MESA #2</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">30 Min</span></div>
+            </div>
+
+            <div class="pedido-item listo">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #6</div>
+                    <div class="mesa-numero">MESA #15</div>
+                </div>
+                <div class="estado-pedido">LISTO</div>
+            </div>
+
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #7</div>
+                    <div class="mesa-numero">MESA #7</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">20 Min</span></div>
+            </div>
+
+            <div class="pedido-item">
+                <div class="indicador-pedido"></div>
+                <div class="info-pedido">
+                    <div class="pedido-numero">PEDIDO #8</div>
+                    <div class="mesa-numero">MESA #9</div>
+                </div>
+                <div class="estado-pedido falta">FALTA: <span class="tiempo">5 Min</span></div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="barra-scroll"></div>
+        </div>
+    </div>
+</body>
+</html>
