@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  width: 375px;
+  height: 750px;
+  background-color: #2f2f2f;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+}
+
+.mesero-info {
+  background-color: black;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Pedido info */
+.pedido-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.pedido-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url('https://via.placeholder.com/40');
+  background-size: cover;
+  background-position: center;
+}
+
+.pedido-info {
+  flex: 1;
+  margin-left: 10px;
+  font-weight: bold;
+  background-color: #111;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.salida-icon {
+  font-size: 20px;
+}
+
+/* Mesas */
+.grid-mesas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.mesa {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Paginación */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.page {
+  font-size: 13px;
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancelar {
+  background-color: #636e72;
+  color: white;
+}
+
+.asignar {
+  background-color: #6c5ce7;
+  color: white;
+}
