@@ -43,6 +43,7 @@ body {
   
   .content {
     text-align: center;
+    text-decoration: none;
   }
   
   .content .title {
@@ -60,8 +61,23 @@ body {
     margin-top: 30px;
   }
 
-  .buttons {
+  button {
     display: flex; 
     justify-content: space-between; 
-    margin-top: 20px;
+    align-items: center;
+    align-content: center;
+    margin: 20px auto;
+    font-size: 1.2em;
+    background-color: #858a85;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
