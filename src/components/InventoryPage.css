@@ -1,0 +1,355 @@
+/* src/components/InventoryPage.css */
+
+.inventory-page-container {
+  flex-grow: 1;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  box-sizing: border-box;
+
+  height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Encabezado de la Página de Inventario --- */
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.inventory-header h2 {
+  font-size: 1.4em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Common button styles from other pages */
+.arrow-button {
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrow-button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.arrow-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Styles for disabled buttons (common) */
+.arrow-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #555;
+  color: #aaa;
+  background-color: #2a2a2a;
+}
+
+/* --- Content area for the list (no scrollbar) --- */
+.inventory-content-scroll {
+  flex-grow: 1;
+  /* overflow-y: auto; */ /* IMPORTANT: Removed to prevent scrollbar */
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+/* --- "CATEGORIAS" section title --- */
+.inventory-content-scroll h3 {
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 4px;
+  color: #ccc;
+}
+
+.inventory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inventory-header-row, .inventory-item-row {
+  display: grid;
+  /* Columns: PRODUCTO (Image + Name), CANTIDAD INICIO DIA, CANTIDAD FINALIZAR DIA */
+  grid-template-columns: 1.2fr 1fr 1fr; /* Adjust proportions */
+  align-items: center;
+  padding: 6px 0;
+  font-size: 0.9em;
+  border-bottom: 1px solid #555;
+}
+
+.inventory-header-row {
+  font-weight: bold;
+  color: #ccc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4px;
+}
+
+.inventory-item-row:last-child {
+  border-bottom: none;
+}
+
+.product-col, .qty-start-col, .qty-end-col {
+  padding-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inventory-item-image {
+    width: 30px; /* Smaller image size */
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.product-col .product-name {
+    font-weight: bold; /* Make name stand out */
+    font-size: 0.9em;
+}
+
+
+/* --- Pagination (common styles) --- */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.pagination span {
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.pagination-arrows button {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid #777;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.2s ease;
+}
+
+.pagination-arrows button:hover:not(:disabled) {
+  background-color: #555;
+  border-color: #fff;
+}
+.pagination-arrows button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* --- Media Queries (Responsive adjustments for width and height) --- */
+
+@media (max-width: 1024px) {
+  .inventory-page-container {
+    padding: 12px;
+    margin: 8px;
+    height: calc(100% - 16px);
+  }
+  .inventory-header h2 {
+    font-size: 1.3em;
+  }
+  .arrow-button {
+    padding: 5px 10px;
+  }
+  .inventory-header-row, .inventory-item-row {
+    padding: 5px 0;
+    font-size: 0.85em;
+  }
+  .inventory-item-image {
+      width: 28px;
+      height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inventory-page-container {
+    padding: 8px;
+    margin: 5px;
+    height: calc(100% - 10px);
+  }
+  .inventory-header h2 {
+    font-size: 1.1em;
+  }
+  .arrow-button {
+    padding: 4px 8px;
+    font-size: 0.8em;
+  }
+  .inventory-header-row, .inventory-item-row {
+    font-size: 0.75em;
+    padding: 4px 0;
+    grid-template-columns: 1.1fr 1fr 1fr; /* Adjust proportions */
+  }
+  .inventory-item-image {
+      width: 25px;
+      height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inventory-page-container {
+    padding: 5px;
+    margin: 3px;
+    height: calc(100% - 6px);
+  }
+  .inventory-header h2 {
+    font-size: 0.9em;
+  }
+  .arrow-button {
+    padding: 3px 6px;
+    font-size: 0.7em;
+  }
+  .inventory-header-row {
+    grid-template-columns: 1fr 1fr 1fr; /* Equal parts */
+    font-size: 0.7em;
+    padding: 3px 0;
+  }
+  .inventory-item-row {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.65em;
+    padding: 2px 0;
+  }
+  .inventory-item-image {
+      width: 20px;
+      height: 20px;
+      margin-right: 3px;
+  }
+}
+
+/* Media Queries by Height */
+@media (max-height: 800px) {
+  .inventory-page-container {
+    padding: 12px;
+    margin: 8px;
+    height: calc(100% - 16px);
+  }
+  .inventory-header h2 {
+    font-size: 1.3em;
+  }
+  .inventory-header-row, .inventory-item-row {
+    padding: 5px 0;
+    font-size: 0.85em;
+  }
+  .inventory-item-image {
+      width: 28px;
+      height: 28px;
+  }
+  .pagination {
+    padding-top: 8px;
+  }
+}
+
+@media (max-height: 650px) {
+  .inventory-page-container {
+    padding: 10px;
+    margin: 6px;
+    height: calc(100% - 12px);
+  }
+  .inventory-header h2 {
+    font-size: 1.1em;
+  }
+  .inventory-header-row, .inventory-item-row {
+    padding: 4px 0;
+    font-size: 0.75em;
+  }
+  .inventory-item-image {
+      width: 25px;
+      height: 25px;
+  }
+  .pagination {
+    padding-top: 5px;
+  }
+  .pagination span {
+    font-size: 0.8em;
+  }
+  .pagination-arrows button {
+    padding: 3px 6px;
+    font-size: 0.7em;
+  }
+}
+
+@media (max-height: 550px) {
+  .inventory-page-container {
+    padding: 8px;
+    margin: 5px;
+    height: calc(100% - 10px);
+  }
+  .inventory-header h2 {
+    font-size: 1em;
+  }
+  .arrow-button {
+    padding: 3px 5px;
+    font-size: 0.7em;
+  }
+  .inventory-header-row, .inventory-item-row {
+    padding: 3px 0;
+    font-size: 0.7em;
+  }
+  .inventory-item-image {
+      width: 22px;
+      height: 22px;
+  }
+  .pagination span {
+    font-size: 0.7em;
+  }
+  .pagination-arrows button {
+    padding: 2px 4px;
+  }
+}
+
+@media (max-height: 450px) {
+  .inventory-page-container {
+    padding: 5px;
+    margin: 3px;
+    height: calc(100% - 6px);
+  }
+  .inventory-header h2 {
+    font-size: 0.9em;
+  }
+  .arrow-button {
+    padding: 2px 4px;
+    font-size: 0.6em;
+  }
+  .inventory-header-row, .inventory-item-row {
+    padding: 2px 0;
+    font-size: 0.65em;
+  }
+  .inventory-item-image {
+      width: 18px;
+      height: 18px;
+  }
+  .pagination span {
+    font-size: 0.6em;
+  }
+  .pagination-arrows button {
+    padding: 1px 3px;
+  }
+}

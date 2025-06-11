@@ -1,0 +1,139 @@
+/* src/Login.css */
+
+/* Estilos para que el contenedor ocupe toda la pantalla y centre el contenido */
+.login-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  min-height: 100vh;       /* Ocupa el 100% de la altura del viewport */
+  width: 100vw;            /* Ocupa el 100% del ancho del viewport */
+  background-color: #f0f0f0; /* Fondo gris claro similar al de la imagen */
+  font-family: Arial, sans-serif; /* Fuente genérica, puedes cambiarla */
+}
+
+/* Estilos para la caja del login (la parte negra) */
+.login-box {
+  background-color: #000; /* Fondo negro */
+  color: #fff;            /* Texto blanco */
+  padding: 40px 50px;      /* Espaciado interno */
+  border-radius: 15px;     /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  width: 100%;             /* Por defecto 100% */
+  max-width: 450px;        /* Ancho máximo para PC, evita que se estire demasiado */
+  text-align: center;      /* Centra el texto dentro de la caja */
+  display: flex;           /* Usa flexbox para organizar los elementos internos */
+  flex-direction: column;  /* Organiza los elementos en columna */
+  gap: 25px;               /* Espacio entre los grupos de elementos */
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+}
+
+/* Título "PEAK PERFORMANCE" */
+.login-title {
+  font-size: 2.2em;      /* Tamaño de fuente más grande */
+  margin-bottom: 20px;   /* Espacio debajo del título */
+  letter-spacing: 2px;   /* Espaciado entre letras */
+  text-transform: uppercase; /* Convertir a mayúsculas */
+}
+
+/* Contenedor para label e input */
+.input-group {
+  text-align: left; /* Alinea el texto a la izquierda dentro del grupo */
+  width: 100%;      /* Ocupa todo el ancho disponible */
+}
+
+.input-group label {
+  display: block;      /* Muestra el label en su propia línea */
+  margin-bottom: 8px;  /* Espacio debajo del label */
+  font-size: 1.1em;    /* Tamaño de fuente para el label */
+}
+
+.input-group input {
+  width: 100%;         /* Ocupa el 100% del ancho del input-group */
+  padding: 12px 15px;  /* Espaciado interno */
+  border: none;        /* Sin borde */
+  border-radius: 5px;  /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  color: #333;         /* Color de texto del input */
+  font-size: 1em;      /* Tamaño de fuente */
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+  outline: none;       /* Quita el contorno al hacer focus */
+}
+
+/* Contenedor para los botones */
+.button-group {
+  display: flex;
+  flex-direction: column; /* ¡AHORA SIEMPRE APILAMOS LOS BOTONES EN COLUMNA POR DEFECTO! */
+  gap: 15px;              /* Espacio entre los botones */
+  width: 100%;            /* Ocupa todo el ancho disponible */
+  margin-top: 15px;       /* Espacio superior */
+}
+
+.button-group button {
+  padding: 12px 20px;     /* Espaciado interno */
+  border: none;           /* Sin borde */
+  border-radius: 5px;     /* Bordes redondeados */
+  cursor: pointer;        /* Cursor de puntero */
+  font-size: 1em;         /* Tamaño de fuente */
+  transition: background-color 0.3s ease; /* Transición suave en hover */
+  width: 100%;            /* Ancho completo del botón */
+}
+
+.forgot-password-btn {
+  background-color: #333; /* Color de fondo oscuro para "Olvidé mi contraseña" */
+  color: #fff;            /* Texto blanco */
+}
+
+.forgot-password-btn:hover {
+  background-color: #555; /* Oscurece al pasar el mouse */
+}
+
+.login-btn {
+  background-color: #888; /* Color de fondo gris para "Ingresar" */
+  color: #fff;            /* Texto blanco */
+  font-weight: bold;      /* Texto en negrita */
+}
+
+.login-btn:hover {
+  background-color: #666; /* Oscurece al pasar el mouse */
+}
+
+/* ¡NUEVOS ESTILOS PARA EL BOTÓN CREAR CUENTA! */
+.create-account-btn {
+  background-color: #333; /* Usamos el mismo color oscuro que "Olvidé mi contraseña" */
+  color: #fff;            /* Texto blanco */
+  font-weight: bold;      /* Texto en negrita, similar al de Ingresar */
+}
+
+.create-account-btn:hover {
+  background-color: #555; /* Oscurece al pasar el mouse */
+}
+
+/* Media Queries para pantallas más grandes (opcional, pero mejora la experiencia) */
+@media (min-width: 768px) {
+  .login-box {
+    padding: 50px 70px; /* Más padding en pantallas grandes */
+    max-width: 500px;   /* Un poco más ancho en pantallas grandes */
+  }
+
+  .login-title {
+    font-size: 2.8em;
+  }
+
+  /*
+  Para mantener los botones apilados en PC también, no necesitamos cambiar
+  flex-direction. Si quisieras que se alinearan de alguna forma en PC,
+  tendrías que ajustar esto. Por ahora, los dejamos apilados.
+  */
+  .button-group {
+    /* Si quieres que se alineen en 2 filas o 3 columnas en PC, aquí se haría: */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+  }
+
+  .button-group button {
+    /* Si se alinearan en fila, necesitarías ajustar los anchos como: */
+    /* flex: 1; */
+    /* max-width: calc(33% - 10px); si fueran 3 en fila */
+  }
+}
